@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10111e">
+  <meta name="description" content="로버드 — 사람의 움직임을 이해하는 착용형 로봇 기술. Movel을 시작으로 사람과 로봇의 새로운 연결을 만듭니다.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="ROBUD — Wearables for human/-oid.">
+  <meta property="og:description" content="움직임을 이해하고, 가능성을 넓힙니다. 사람 곁의 로봇 파트너, 로버드.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://robud.kr/">
+  <meta property="og:image" content="https://robud.kr/assets/social-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://robud.kr/">
+  <meta property="og:locale" content="ko_KR">
+  <title>ROBUD — Wearables for human/-oid.</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+<header class="site-header" id="siteHeader">
+  <a class="wordmark brand-lockup" href="#home" aria-label="ROBUD 홈"><img class="custom-logo" data-robud-logo src="assets/robud-logo.webp" width="1200" height="454" alt="Robud — wearables for human/-oid" decoding="async"><span class="wordmark-text" hidden>Robud</span></a>
+  <nav class="desktop-nav" aria-label="주 메뉴" data-i18n-aria="mainNav">
+    <a href="#about" data-i18n="navAbout">로버드</a><a href="#technology" data-i18n="navTech">기술</a><a href="#movel">Movel</a><a href="#applications" data-i18n="navApps">활용 분야</a>
+  </nav>
+  <div class="header-actions">
+    <div class="language-switch" aria-label="Language"><button type="button" class="lang active" data-lang="ko" aria-pressed="true">KO</button><span>/</span><button type="button" class="lang" data-lang="en" aria-pressed="false">EN</button></div>
+    <button class="button small header-contact" data-inquiry="partnership"><span data-i18n="navContact">협력 문의</span><span aria-hidden="true">↗</span></button>
+    <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav" data-i18n-aria="menuOpen"><span></span><span></span></button>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav" aria-label="모바일 메뉴" hidden>
+  <a href="#about" data-i18n="navAbout">로버드</a><a href="#technology" data-i18n="navTech">기술</a><a href="#movel">Movel</a><a href="#applications" data-i18n="navApps">활용 분야</a><a href="#contact" data-i18n="navContact">협력 문의</a>
+</nav>
+<main id="main">
+<section class="hero" id="home" aria-labelledby="heroTitle">
+  <div class="hero-stage" aria-hidden="true"><canvas id="motionCanvas"></canvas><div class="canvas-fallback"></div></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="hero-topline"><span class="eyebrow"><i class="status-dot"></i> ROBOT + BUDDY</span><span class="mono hero-index">HUMAN–ROBOT INTERACTION / 001</span></div>
+  <div class="hero-copy">
+    <h1 id="heroTitle">Wearables for<br>human<span class="hero-accent">/-oid.</span></h1>
+    <h2 data-i18n="heroSub">움직임을 이해하고,<br>가능성을 넓힙니다.</h2>
+    <p data-i18n="heroBody">사람의 움직임을 읽는 착용형 로봇 기술.<br>로버드는 사람 곁에서, 더 나은 움직임의 가능성을 만듭니다.</p>
+    <div class="hero-buttons"><a class="button light" href="#movel"><span data-i18n="heroProduct">Movel 살펴보기</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#technology"><span data-i18n="heroTech">우리의 기술</span><span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="field-label field-label-top"><span class="field-dot"></span><span class="mono">HUMAN INPUT</span><span class="field-line"></span></div>
+  <div class="field-label field-label-bottom"><span class="field-line"></span><span class="mono">ROBOT RESPONSE</span><span class="field-dot"></span></div>
+  <div class="field-caption"><span class="mono">THE MOTION FIELD</span><span data-i18n="heroArtNote">움직임의 연결을 표현한 그래픽 · 제품 외형 아님</span></div>
+  <div class="hero-bottom">
+    <div class="hero-bottom-left"><span class="mono">01 — EXPLORE THE CONNECTION</span><a href="#about" class="scroll-link" aria-label="로버드 소개로 이동" data-i18n-aria="scrollAbout">↓</a></div>
+    <div class="field-controls" aria-label="그래픽 표현 방식" data-i18n-aria="fieldControls"><button type="button" class="field-mode active" data-mode="0" aria-pressed="true"><span data-i18n="modeMotion">움직임</span></button><button type="button" class="field-mode" data-mode="1" aria-pressed="false"><span data-i18n="modeSense">센싱</span></button><button type="button" class="field-mode" data-mode="2" aria-pressed="false"><span data-i18n="modeConnect">연결</span></button><button type="button" id="pauseMotion" class="pause-button" aria-label="애니메이션 일시정지" data-i18n-aria="pauseMotion" aria-pressed="false">Ⅱ</button></div>
+  </div>
+</section>
+<div class="principle-strip"><span><b>01</b><span data-i18n="principle1">사람 곁에서 출발</span></span><span><b>02</b><span data-i18n="principle2">데이터로 연결</span></span><span><b>03</b><span data-i18n="principle3">로봇으로 확장</span></span><span class="mono strip-signature">BUILT AROUND YOU.</span></div>
+<section id="about" class="section about-section">
+  <div class="section-heading"><span class="eyebrow"><span class="section-no">01 /</span> ABOUT ROBUD</span><span class="section-side" data-i18n="aboutSide">기술의 중심에는, 언제나 사람.</span></div>
+  <div class="about-grid">
+    <h2 class="section-title" data-i18n="aboutTitle">로봇의 정밀함에,<br>동료의 이해를 더하다.</h2>
+    <div class="about-copy"><p data-i18n="aboutBody1">로버드의 이름은 Robot과 Buddy에서 시작합니다. 사람의 움직임을 이해하고, 곁에서 함께하는 로봇 파트너를 만들겠다는 뜻입니다.</p><p class="muted" data-i18n="aboutBody2">우리는 착용 구조, 구동·센싱, 데이터 해석을 연결합니다. 첫 제품 Movel을 통해 운동하는 순간을 이해하고, 사람과 로봇이 더 자연스럽게 상호작용하는 미래를 준비합니다.</p></div>
+  </div>
+  <div class="brand-equation" aria-label="Robot plus Buddy equals Robud"><span class="equation-word">Robot<span class="equation-description" data-i18n="robotDesc">움직임을 다루는 기술</span></span><span class="equation-sign" aria-hidden="true">+</span><span class="equation-word">Buddy<span class="equation-description" data-i18n="buddyDesc">사람을 이해하는 동료</span></span><span class="equation-sign equals" aria-hidden="true">=</span><span class="equation-result brand-lockup"><img class="custom-logo" data-robud-logo src="assets/robud-logo.webp" width="1200" height="454" alt="Robud — wearables for human/-oid" decoding="async"><span class="wordmark-text" hidden>Robud</span></span></div>
+</section>
+<section id="technology" class="section technology-section">
+  <div class="section-heading"><span class="eyebrow"><span class="section-no">02 /</span> OUR TECHNOLOGY</span><span class="section-side" data-i18n="techSide">착용에서 데이터까지, 하나의 연결.</span></div>
+  <div class="section-title-row"><h2 class="section-title" data-i18n="techTitle">사람과 로봇을 잇는<br>세 가지 연결.</h2><p class="narrow-description" data-i18n="techIntro">좋은 기술은 몸 가까이에서 시작합니다.<br>착용하고, 감지하고, 이해하는 기술을 하나의 시스템으로 설계합니다.</p></div>
+  <div class="tech-grid">
+    <div class="tech-visual" id="techVisual" data-active="wear">
+      <div class="technical-top"><span class="mono">ROBUD / CONNECTION STUDY</span><span class="technical-corner">+</span></div>
+      <svg class="joint-study" viewBox="0 0 640 490" role="img" aria-labelledby="jointTitle jointDesc">
+        <title id="jointTitle">착용형 로봇의 움직임과 센싱 연결 개념도</title><desc id="jointDesc">두 링크와 관절을 연결한 설명용 도형입니다. 실제 Movel 제품 외형을 나타내지 않습니다.</desc>
+        <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#dce0dd" stroke-width=".65"/></pattern><linearGradient id="linkFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4e8e4"/><stop offset=".5" stop-color="#fafbf8"/><stop offset="1" stop-color="#cbd2cc"/></linearGradient><linearGradient id="jointFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c5d4ca"/><stop offset="1" stop-color="#eef3ed"/></linearGradient></defs>
+        <rect width="640" height="490" fill="url(#grid)"/>
+        <circle cx="328" cy="265" r="180" fill="none" stroke="#ced5cf" stroke-dasharray="3 8"/>
+        <path d="M328 265L328 50M328 265L565 265" stroke="#bbc4bd" stroke-width="1" stroke-dasharray="4 6"/>
+        <g class="arm-upper"><path d="M175 77Q163 55 188 42L221 27Q241 23 251 43L356 225L301 256Z" fill="url(#linkFill)" stroke="#aeb9b0" stroke-width="1.2"/><path d="M183 87L229 62M204 125L252 98M227 163L274 136" stroke="#b4beb5" stroke-width="9"/><path d="M202 44L313 238" stroke="#fff" stroke-width="2" opacity=".8"/></g>
+        <g class="arm-lower"><path d="M344 230L533 151Q554 143 561 167L570 201Q573 216 555 223L350 294Z" fill="url(#linkFill)" stroke="#aeb9b0" stroke-width="1.2"/><path d="M456 181L473 244M491 169L508 232" stroke="#b4beb5" stroke-width="12"/></g>
+        <circle class="joint-halo" cx="328" cy="265" r="88" fill="#365bf5" opacity=".07"/><circle cx="328" cy="265" r="57" fill="url(#jointFill)" stroke="#95a399" stroke-width="1.5"/><circle cx="328" cy="265" r="43" fill="#18221d" stroke="#445c4d" stroke-width="3"/><circle cx="328" cy="265" r="29" fill="#284bff"/><circle cx="328" cy="265" r="21" fill="none" stroke="#93a5ff" stroke-width="1"/>
+        <path d="M317 265h22M328 254v22" stroke="white" stroke-width="1.4"/>
+        <g class="sense-lines" fill="none" stroke="#365bf5"><path d="M328 180a85 85 0 0 1 80 55" stroke-width="2.5"/><path d="M400 221l9 17 5-18" stroke-width="1.5"/><circle cx="328" cy="265" r="106" stroke-dasharray="2 8"/></g>
+        <g class="connect-lines" fill="none" stroke="#365bf5" stroke-width="1.3"><path d="M362 312L432 372H551"/><circle cx="551" cy="372" r="5" fill="#365bf5"/><path d="M291 235L183 222H85"/><circle cx="85" cy="222" r="5" fill="#365bf5"/></g>
+        <g fill="#4d5d52" font-family="monospace" font-size="10" letter-spacing="1.4"><text x="64" y="199">HUMAN</text><text x="460" y="399">ROBOT</text><text x="302" y="446">INTERFACE</text></g>
+        <circle cx="328" cy="265" r="153" fill="none" stroke="#99aa9d" stroke-width=".7" stroke-dasharray="1 14"/>
+      </svg>
+      <div class="technical-bottom"><span class="mono" id="techVisualLabel">01 / WEAR</span><span data-i18n="diagramNote">설명용 개념도 · 실제 제품 외형 아님</span></div>
+    </div>
+    <div class="tech-content"><div class="tech-tabs" role="tablist" aria-label="기술 영역" data-i18n-aria="techTabLabel">
+      <button id="tab-wear" role="tab" aria-selected="true" aria-controls="techPanel" data-tech="wear" tabindex="0"><span class="mono">01</span><span data-i18n="techWear">착용 구조</span><span aria-hidden="true">↗</span></button>
+      <button id="tab-sense" role="tab" aria-selected="false" aria-controls="techPanel" data-tech="sense" tabindex="-1"><span class="mono">02</span><span data-i18n="techSense">구동·센싱</span><span aria-hidden="true">↗</span></button>
+      <button id="tab-connect" role="tab" aria-selected="false" aria-controls="techPanel" data-tech="connect" tabindex="-1"><span class="mono">03</span><span data-i18n="techConnect">데이터 해석</span><span aria-hidden="true">↗</span></button>
+    </div><div id="techPanel" role="tabpanel" tabindex="0" aria-labelledby="tab-wear"><span class="tech-panel-tag mono">WEAR / HUMAN FIRST</span><h3 id="techPanelTitle">몸에 가까울수록,<br>더 자연스러워야 합니다.</h3><p id="techPanelText">사용자의 움직임을 고려한 착용 구조와 모듈형 연결을 연구합니다. 몸과 기기가 만나는 지점에서 착용감과 움직임의 자유를 함께 고민합니다.</p><div id="techPanelTags" class="tags"><span>착용 구조</span><span>모듈형 연결</span><span>사용자 중심 설계</span></div><p class="development-note" data-i18n="techDevNote">로버드가 지향하는 기술 개발 방향입니다.</p></div></div>
+  </div>
+</section>
+<section id="movel" class="section movel-section">
+  <div class="section-heading"><span class="eyebrow"><span class="section-no">03 /</span> FIRST PRODUCT</span><span class="development-badge"><i></i><span data-i18n="inDevelopment">개발 중</span></span></div>
+  <div class="movel-grid"><div class="movel-intro"><h2>Movel<span>.</span></h2><h3 data-i18n="movelTitle">운동하는 순간을,<br>이해하는 순간으로.</h3><p data-i18n="movelBody">착용형 장치와 데이터 분석을 연결하는 로버드의 첫 제품. 운동 중 장치 토크와 관절 움직임을 기록하고, 운동을 더 구체적으로 이해하도록 돕는 시스템을 개발합니다.</p><button class="text-link dark-link" data-inquiry="movel"><span data-i18n="movelInquiry">제품·실증 협의하기</span><span aria-hidden="true">↗</span></button><div class="movel-architecture"><span data-i18n="movelHardware">착용형 장치</span><b>+</b><span data-i18n="movelSoftware">분석 소프트웨어</span></div></div>
+  <div class="movel-interface" id="movelMedia"><img id="productImage" alt="Movel 제품 사진" hidden><div id="productConcept"><div class="interface-header"><span class="mono">MOVEL / SESSION CONCEPT</span><span class="example-tag" data-i18n="exampleUI">화면 구성 예시</span></div><div class="session-title"><span data-i18n="sessionTitle">움직임의 한 순간</span><span class="mono">SESSION 001</span></div><div class="session-metrics"><div><span data-i18n="angleLabel">관절각도 · 예시</span><strong><span id="angleValue">76</span><small>°</small></strong></div><div><span data-i18n="torqueLabel">장치 토크 · 예시</span><strong><span id="torqueValue">8.4</span><small>N·m</small></strong></div></div><div class="chart-wrap"><div class="chart-labels"><span>TORQUE</span><span data-i18n="virtualData">가상 데이터</span></div><svg id="sessionChart" viewBox="0 0 600 180" role="img" aria-label="설명용 가상 운동 데이터 곡선" data-i18n-aria="chartAria"><g stroke="#dfe4df" stroke-width="1"><path d="M0 20H600M0 65H600M0 110H600M0 155H600"/><path d="M0 0V180M120 0V180M240 0V180M360 0V180M480 0V180M600 0V180"/></g><path id="chartArea" fill="#514cff" opacity=".08"/><path id="chartPath" fill="none" stroke="#514cff" stroke-width="2.5"/><line id="chartCursor" x1="300" x2="300" y1="0" y2="180" stroke="#15221a" stroke-dasharray="3 4"/><circle id="chartPoint" cx="300" cy="70" r="5" fill="#514cff" stroke="#fff" stroke-width="3"/></svg><div class="chart-axis mono"><span>0%</span><span>MOVEMENT CYCLE</span><span>100%</span></div></div><label class="range-label" for="movementRange"><span data-i18n="rangeLabel">움직임을 탐색해 보세요</span><span class="mono" id="rangeOutput">50%</span></label><input id="movementRange" type="range" min="0" max="100" value="50" aria-describedby="demoDisclaimer"><p id="demoDisclaimer" data-i18n="demoDisclaimer">가상 데이터로 만든 설명용 화면입니다. 실제 측정값·제품 성능·출시 소프트웨어 화면이 아닙니다.</p></div></div></div>
+  <div class="product-footnote"><span class="mono">DESIGNED TO CONNECT</span><p data-i18n="movelFootnote">제품 사양과 제공 기능, 실증 및 공급 일정은 개발·검증 과정에 따라 확정됩니다.</p></div>
+</section>
+<section id="applications" class="section applications-section">
+  <div class="section-heading"><span class="eyebrow"><span class="section-no">04 /</span> POSSIBILITIES</span><span class="section-side" data-i18n="appsSide">기술이 필요한 현장에서, 함께.</span></div>
+  <div class="section-title-row"><h2 class="section-title" data-i18n="appsTitle">각자의 현장에서,<br>더 나은 움직임을.</h2><p class="narrow-description" data-i18n="appsIntro">정밀한 움직임 데이터가 필요한 곳.<br>로버드와 함께 활용 가능성을 검토할 협력 분야입니다.</p></div>
+  <div class="application-list">
+    <details class="application" open><summary><span class="app-number mono">01</span><span class="app-name" data-i18n="app1Title">전문 스포츠</span><span class="app-en mono">SPORTS</span><span class="app-toggle" aria-hidden="true">+</span></summary><div class="app-expanded"><div class="app-copy"><p data-i18n="app1Body">선수의 오늘을 더 구체적으로 이해하기 위해. 반복 측정과 세션 비교를 통해 훈련 현장의 판단을 지원하는 방법을 함께 찾습니다.</p><div class="tags"><span data-i18n="app1Tag1">선수 훈련</span><span data-i18n="app1Tag2">움직임 비교</span><span data-i18n="app1Tag3">현장 실증</span></div><button class="text-link dark-link" data-inquiry="sports"><span data-i18n="appAsk">활용 가능성 논의하기</span><span aria-hidden="true">↗</span></button></div><div class="application-art sports-art" aria-hidden="true"><div class="court"><div class="court-line"></div><div class="court-circle"></div><div class="court-dot"></div></div><span class="mono">PRECISION IN EVERY MOVE.</span></div></div></details>
+    <details class="application"><summary><span class="app-number mono">02</span><span class="app-name" data-i18n="app2Title">트레이닝센터</span><span class="app-en mono">TRAINING</span><span class="app-toggle" aria-hidden="true">+</span></summary><div class="app-expanded"><div class="app-copy"><p data-i18n="app2Body">경험에 데이터라는 언어를 더합니다. 회원의 운동 과정을 기록하고 변화를 함께 살펴보는 상담·코칭 경험을 만들어갑니다.</p><div class="tags"><span data-i18n="app2Tag1">개인별 운동 기록</span><span data-i18n="app2Tag2">세션 비교</span><span data-i18n="app2Tag3">코칭 지원</span></div><button class="text-link dark-link" data-inquiry="training"><span data-i18n="appAsk">활용 가능성 논의하기</span><span aria-hidden="true">↗</span></button></div><div class="application-art training-art" aria-hidden="true"><div class="training-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="mono">MAKE PROGRESS VISIBLE.</span></div></div></details>
+    <details class="application"><summary><span class="app-number mono">03</span><span class="app-name" data-i18n="app3Title">연구·공공 체육</span><span class="app-en mono">RESEARCH</span><span class="app-toggle" aria-hidden="true">+</span></summary><div class="app-expanded"><div class="app-copy"><p data-i18n="app3Body">다양한 움직임을 탐구하는 연구와 현장 프로그램. 착용형 측정, 데이터 수집, 사용자 경험을 함께 검토할 연구·실증 파트너를 찾습니다.</p><div class="tags"><span data-i18n="app3Tag1">공동연구</span><span data-i18n="app3Tag2">측정 방법 검토</span><span data-i18n="app3Tag3">사용자 경험</span></div><button class="text-link dark-link" data-inquiry="research"><span data-i18n="appAsk">활용 가능성 논의하기</span><span aria-hidden="true">↗</span></button></div><div class="application-art research-art" aria-hidden="true"><div class="research-orbit"><i></i><i></i><i></i><b></b></div><span class="mono">EXPLORE WHAT COMES NEXT.</span></div></div></details>
+  </div><p class="application-note" data-i18n="appNote">위 분야는 협력 제안 대상이며, 도입 실적이나 검증된 효능을 의미하지 않습니다.</p>
+</section>
+<section id="vision" class="vision-section">
+  <div class="vision-graphic" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vision-inner"><span class="eyebrow"><span class="section-no">05 /</span> BEYOND THE FIRST MOVE</span><h2>Human today.<br>Human<span>/-oid</span> tomorrow.</h2><div class="vision-bottom"><p data-i18n="visionBody">사람 곁에서 쌓은 기술을,<br>로봇과 함께하는 미래로.</p><div><p data-i18n="visionDetail">착용형 기술에서 시작해 인간–로봇 상호작용으로.<br>로버드가 바라보는 장기적인 연구·개발 방향입니다.</p><span class="mono vision-note">A VISION. NOT A FINISH LINE.</span></div></div></div>
+</section>
+<section id="contact" class="section contact-section"><div><span class="eyebrow"><span class="section-no">06 /</span> LET’S MOVE FORWARD</span><h2 class="section-title" data-i18n="contactTitle">다음 움직임을,<br>함께 만듭니다.</h2><p data-i18n="contactBody">제품 도입 검토부터 실증, 공동연구, 사업 협력까지.<br>어떤 현장의 움직임을 함께 이해해 볼까요?</p><div class="contact-email-block"><span class="contact-email-label" data-i18n="contactEmailLabel">공식 문의 이메일</span><a class="contact-email" data-contact-email href="mailto:robudofficial@robud.kr"><span data-contact-address>robudofficial@robud.kr</span><span aria-hidden="true">↗</span></a><span class="contact-email-hint" data-i18n="contactEmailHint">이메일로 직접 연락하거나, 문의 초안을 작성해 주세요.</span></div></div><button class="contact-circle" data-inquiry="partnership"><span data-i18n="contactButton">협력 문의</span><span class="contact-arrow" aria-hidden="true">↗</span></button></section>
+</main>
+<footer class="site-footer"><div class="footer-main"><a class="wordmark footer-wordmark brand-lockup" href="#home" aria-label="ROBUD 홈"><img class="custom-logo" data-robud-logo src="assets/robud-logo.webp" width="1200" height="454" alt="Robud — wearables for human/-oid" decoding="async"><span class="wordmark-text" hidden>Robud</span></a><div class="footer-contact"><span class="mono">ROBOT + BUDDY</span><a data-contact-email href="mailto:robudofficial@robud.kr" data-contact-address>robudofficial@robud.kr</a></div><a class="back-top" href="#home"><span data-i18n="backTop">맨 위로</span> ↑</a></div><div class="footer-bottom"><span>© <span id="copyrightYear">2026</span> <span id="companyLabel">ROBUD</span>. All rights reserved.</span><span id="footerAddress" hidden></span><button class="footer-link" id="privacyButton" data-i18n="privacyButton">개인정보 안내</button><span class="preview-label" id="previewLabel"><i></i><span data-i18n="previewLabel">도메인 연결 전 시안</span></span></div></footer>
+<dialog id="inquiryDialog" class="inquiry-dialog" aria-labelledby="inquiryTitle"><button class="dialog-close" type="button" data-close-dialog aria-label="닫기" data-i18n-aria="close">×</button><span class="eyebrow">START A CONVERSATION</span><h2 id="inquiryTitle" data-i18n="inquiryTitle">어떤 움직임을<br>함께 만들까요?</h2><div class="inquiry-recipient"><span data-i18n="recipientLabel">받는 곳</span><a data-contact-email href="mailto:robudofficial@robud.kr" data-contact-address>robudofficial@robud.kr</a></div><p id="inquiryStatus" class="inquiry-status"></p><form id="inquiryForm"><label><span data-i18n="formTopic">문의 분야</span><select id="inquiryTopic" name="topic"><option value="partnership" data-i18n="topicPartnership">사업 협력</option><option value="movel" data-i18n="topicMovel">Movel 제품·실증</option><option value="sports" data-i18n="topicSports">스포츠 분야 활용</option><option value="training" data-i18n="topicTraining">트레이닝센터 활용</option><option value="research" data-i18n="topicResearch">공동연구</option><option value="other" data-i18n="topicOther">기타</option></select></label><div class="form-grid"><label><span data-i18n="formOrg">회사·기관명 (선택)</span><input name="organization" id="inquiryOrganization" maxlength="120" autocomplete="organization"></label><label><span data-i18n="formName">이름 (선택)</span><input name="name" id="inquiryName" maxlength="80" autocomplete="name"></label></div><label><span data-i18n="formEmail">회신 이메일 (선택)</span><input type="email" name="email" id="inquiryEmail" maxlength="254" autocomplete="email"></label><label><span data-i18n="formMessage">문의 내용</span><textarea name="message" id="inquiryMessage" rows="4" maxlength="5000" required placeholder="함께 검토하고 싶은 현장이나 활용 목적을 알려주세요." data-i18n-placeholder="messagePlaceholder"></textarea></label><p class="form-notice" data-i18n="formNotice">이 사이트에서 자동 발송하지 않습니다. 메일 앱에서 초안을 확인한 뒤 직접 발송해 주세요. 메일 앱을 사용하지 않는 경우 초안을 복사해 평소 사용하는 메일에 붙여넣을 수 있습니다.</p><div class="form-actions"><button type="button" class="button dark" id="emailInquiry"><span data-i18n="emailInquiry">이메일 초안 열기</span><span aria-hidden="true">↗</span></button><button type="submit" class="text-link dark-link" id="copyInquiry"><span data-i18n="copyInquiry">초안 복사</span><span aria-hidden="true">↗</span></button><button type="button" class="text-link dark-link" id="saveInquiry"><span data-i18n="saveInquiry">초안 저장</span><span aria-hidden="true">↓</span></button></div><p id="formResult" class="form-result" role="status" aria-live="polite"></p></form></dialog>
+<dialog id="privacyDialog" class="privacy-dialog" aria-labelledby="privacyTitle"><button class="dialog-close" type="button" data-close-dialog aria-label="닫기" data-i18n-aria="close">×</button><span class="eyebrow">PRIVACY / PREVIEW</span><h2 id="privacyTitle" data-i18n="privacyTitle">개인정보 안내</h2><div data-i18n="privacyText"><p>이 시안에는 서버 전송형 문의 폼, 방문 분석 도구, 광고 추적기, 쿠키가 설치되어 있지 않습니다. 입력 내용은 현재 브라우저 화면에서만 처리하며 페이지를 새로고침하거나 닫으면 사라집니다. 사용자가 복사·저장한 초안은 해당 기기에서 직접 관리합니다.</p><p>언어 선택도 현재 페이지에서만 유지합니다. 공개용 이메일이 연결된 경우에도 문의를 자동 발송하지 않고, 사용자의 메일 앱에 초안을 엽니다.</p><p>정식 사이트 공개 전 호스팅 접속 기록, 운영 주체, 수집 항목, 처리 목적·기간, 문의 채널 등을 실제 운영 방식에 맞게 검토하고 개인정보처리방침을 확정해야 합니다. 이 안내는 정식 개인정보처리방침이 아닙니다.</p></div></dialog>
+<noscript><div class="noscript-note">이 페이지의 본문은 자바스크립트 없이 읽을 수 있습니다. 언어 전환·문의 초안·움직임 그래픽은 자바스크립트가 필요합니다.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "robud-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ROBUD website — Cloudflare Workers static assets",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check public/app.js && node --check public/config.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
