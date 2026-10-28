@@ -116,3 +116,4 @@ HTML의 로컬 파일 참조 경로, JSON 구문, app.js/config.js의 JavaScript
 - 공개 브랜치와 미리보기: https://developers.cloudflare.com/workers/ci-cd/builds/build-branches/
 - 정적 파일 경로: https://developers.cloudflare.com/workers/static-assets/binding/
 - GitHub 연결 및 접근 범위: https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/
+- ROBUD website - GitHub automatic deployment enabled.
