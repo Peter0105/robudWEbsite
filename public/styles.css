@@ -62,3 +62,215 @@
 @media(max-width:800px){.custom-logo{width:166px}.site-header{gap:12px}.brand-equation{gap:12px;padding:25px 18px}.equation-result .custom-logo{width:195px}.footer-wordmark .custom-logo{width:218px}.footer-main{flex-wrap:wrap}.footer-contact{gap:8px}.contact-email{font-size:22px}.contact-email-hint{font-size:10px}}
 @media(max-width:480px){.custom-logo{width:155px}.site-header{gap:7px}.header-actions{gap:7px}.site-header .lang{min-width:29px;padding:12px 5px}.brand-equation{display:grid;grid-template-columns:1fr 28px 1fr;gap:22px 8px;padding:25px 18px;text-align:center}.brand-equation .equation-sign{align-self:center;margin:0}.brand-equation .equation-sign.equals{display:none}.equation-description{max-width:none}.equation-result{grid-column:1/-1;justify-self:center}.equation-result .custom-logo{width:224px}.footer-wordmark .custom-logo{width:196px}.footer-contact{order:3;width:100%;margin-top:8px}.contact-email{font-size:20px;gap:12px}.contact-email-block{margin-top:27px}.contact-section{gap:24px}.contact-section>div{min-width:0;max-width:100%}.inquiry-recipient{font-size:11px}.form-actions{gap:16px}.form-actions .button{font-size:11px}.form-actions .text-link{font-size:11px}}
 @media(max-width:360px){.custom-logo{width:137px}.site-header{gap:5px}.header-actions{gap:2px}.contact-email{font-size:18px}.contact-email-hint{font-size:10px}.site-header .lang{min-width:27px}}
+
+/* ROBUD / restrained interaction refinement — 2026-10-29
+   Presentation-only changes. Existing content, destinations, translations,
+   forms, analytics settings and deployment configuration are unchanged.
+   Append this block AFTER the existing stylesheet if merging manually. */
+@media screen {
+  :root {
+    --ui-radius: 7px;
+    --ui-ease: cubic-bezier(.2,.65,.3,1);
+  }
+
+  /* Direction glyphs add no information to these already labelled controls. */
+  .button > span[aria-hidden="true"],
+  .text-link > span[aria-hidden="true"],
+  .tech-tabs button > span[aria-hidden="true"],
+  .contact-email > span[aria-hidden="true"],
+  .contact-circle > .contact-arrow {
+    display: none;
+  }
+
+  /* Consistent, quiet buttons. No moving geometry or oversized icon. */
+  .button {
+    justify-content: center;
+    gap: 0;
+    border-radius: var(--ui-radius);
+    transition: background-color 220ms var(--ui-ease),
+                border-color 220ms var(--ui-ease),
+                box-shadow 220ms var(--ui-ease),
+                color 220ms var(--ui-ease);
+  }
+  .button:hover,
+  .button:active { transform: none; }
+  .button > [data-i18n] { font-size: inherit; font-weight: inherit; }
+  .site-header .button.small { min-height: 42px; padding: 0 20px; gap: 0; }
+  .hero-buttons { gap: 30px; }
+  .hero-buttons .button {
+    min-width: 164px;
+    min-height: 54px;
+    padding: 0 26px;
+    font-size: 13px;
+    gap: 0;
+  }
+  .hero-buttons .button.light {
+    background: #f1effa;
+    color: #242036;
+    border-color: #ffffff2e;
+  }
+  .hero-buttons .button.light:hover,
+  .hero-buttons .button.light:focus-visible {
+    background: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 4px 20px #b3a8ff12;
+  }
+  .button:focus-visible { outline-offset: 5px; }
+
+  /* Text links keep their size; only the fine underline changes on hover. */
+  .text-link {
+    position: relative;
+    gap: 0;
+    border-bottom-color: transparent;
+    padding: 4px 0;
+    transition: color 220ms var(--ui-ease);
+  }
+  .text-link:hover { gap: 0; }
+  .text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 1px;
+    background: currentColor;
+    opacity: .3;
+    transform: scaleX(.45);
+    transform-origin: left center;
+    transition: transform 260ms var(--ui-ease), opacity 260ms var(--ui-ease);
+    pointer-events: none;
+  }
+  .text-link:hover::after,
+  .text-link:focus-visible::after { transform: scaleX(1); opacity: .8; }
+  .hero-buttons .text-link {
+    gap: 0;
+    min-height: 54px;
+    font-size: 13px;
+    color: #dfdcea;
+  }
+  .hero-buttons .text-link:hover { color: #ffffff; }
+  .hero-buttons .text-link::after { bottom: 9px; }
+
+  /* A 1px vertical track replaces the character arrow. Hover/focus only,
+     one cycle: no perpetual bounce, and a 44px accessible click target. */
+  .hero-bottom-left { gap: 22px; }
+  .scroll-link {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    font-size: 0;
+    line-height: 0;
+    border-radius: var(--ui-radius);
+    color: #c9c3e4;
+  }
+  .scroll-link::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: calc(50% - .5px);
+    width: 1px;
+    height: 30px;
+    background: currentColor;
+    opacity: .25;
+  }
+  .scroll-link::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: calc(50% - 1.5px);
+    width: 3px;
+    height: 8px;
+    border-radius: 3px;
+    background: currentColor;
+    opacity: .8;
+  }
+  .scroll-link:hover::after,
+  .scroll-link:focus-visible::after {
+    animation: robud-scroll-travel 1200ms var(--ui-ease) 1;
+  }
+  .hero:has(#pauseMotion[aria-pressed="true"]) .scroll-link::after {
+    animation: none;
+  }
+  @keyframes robud-scroll-travel {
+    0% { transform: translateY(0); opacity: .8; }
+    70% { transform: translateY(20px); opacity: .8; }
+    90% { transform: translateY(20px); opacity: 0; }
+    91% { transform: translateY(0); opacity: 0; }
+    100% { transform: translateY(0); opacity: .8; }
+  }
+
+  /* The selected technology tab already has an underline: no extra arrow. */
+  .tech-tabs button { transition: color 220ms var(--ui-ease); }
+
+  /* Replace the large, rotating arrow circle with a conventional CTA. */
+  .contact-circle {
+    width: auto;
+    height: auto;
+    min-width: 166px;
+    min-height: 54px;
+    padding: 0 28px;
+    border-radius: var(--ui-radius);
+    flex-direction: row;
+    gap: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #493b91;
+    border-color: #493b91;
+    color: #ffffff;
+    transition: background-color 220ms var(--ui-ease),
+                border-color 220ms var(--ui-ease);
+  }
+  .contact-circle:hover,
+  .contact-circle:focus-visible {
+    transform: none;
+    background: #5b4ba8;
+    border-color: #5b4ba8;
+  }
+  .contact-email { gap: 0; }
+  .form-actions .button,
+  .form-actions .text-link { gap: 0; }
+  .back-top { gap: 0; font-size: 0; }
+  .back-top > [data-i18n] { font-size: 11px; }
+  .back-top:hover > [data-i18n],
+  .back-top:focus-visible > [data-i18n] {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-circle { margin-right: 0; }
+}
+@media screen and (max-width: 480px) {
+  .hero-buttons { gap: 24px; }
+  .hero-buttons .button {
+    min-width: 148px;
+    min-height: 50px;
+    padding: 0 20px;
+    gap: 0;
+    font-size: 12px;
+  }
+  .hero-buttons .text-link { min-height: 50px; font-size: 12px; gap: 0; }
+  .hero-bottom-left { gap: 0; }
+  .contact-circle {
+    min-width: 150px;
+    min-height: 50px;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 24px;
+    font-size: 12px;
+  }
+  .back-top > [data-i18n] { font-size: 10px; }
+}
+@media screen and (max-width: 360px) {
+  .hero-buttons { gap: 20px; }
+  .hero-buttons .button { min-width: 140px; padding: 0 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-link::after { animation: none !important; }
+  .text-link::after,
+  .button,
+  .contact-circle { transition: none !important; }
+}
