@@ -78,7 +78,7 @@ npm run dev
 
 배포 후 Google Search Console과 네이버 서치어드바이저에 사이트를 등록하고 `https://robud.kr/sitemap.xml`을 제출해야 검색 수집을 요청할 수 있습니다. 검색 결과 반영 및 순위는 검색 엔진의 평가·수집 시점에 따라 달라집니다.
 
-네이버 HTML 태그 소유권 확인 코드는 `public/index.html`의 `<head>` 안에 발급받은 `<meta name="naver-site-verification" content="발급된 값" />` 형태로 추가합니다.
+네이버 서치어드바이저 소유권 확인용 메타 태그는 `public/index.html`의 `<head>` 안에 추가되어 있습니다. 인증 코드를 변경해야 할 때만 발급받은 값으로 교체하세요.
 
 ## 문의
 `robudofficial@robud.kr`

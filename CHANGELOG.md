@@ -30,3 +30,6 @@
 - `sitemap.xml`을 표준 네임스페이스로 갱신
 - HTTP `X-Robots-Tag`와 HTML `noindex` 차단 설정 제거
 - 푸터의 도메인 연결 전 시안 배지 및 관련 비표시 코드 제거
+
+## 네이버 서치어드바이저 소유권 확인 (2026-11-18)
+- 발급받은 `naver-site-verification` 메타 태그를 `public/index.html`의 `<head>` 내부에 추가
