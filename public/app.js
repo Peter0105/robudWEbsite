@@ -47,8 +47,8 @@
   const extraStrings = {
     ko: {
       navSoftware:'소프트웨어', navRoadmap:'개발 현황',
-      heroHeadline:'운동의 저항을 제어하고,<br>움직임을 데이터로.',
-      heroDescription:'착용형 구동 장치와 센서 데이터를 연결해 운동 중 발생하는 움직임을 기록하고 분석하는 시스템을 개발합니다.',
+      heroHeadline:'사람의 움직임을 읽고,<br>운동의 가능성을 넓히다.',
+      heroDescription:'착용형 구동 기술과 센서 데이터를 연결합니다. MOVEL은 운동 중 발생하는 저항과 움직임을 기록하고, 더 구체적으로 이해하도록 돕는 시스템입니다.',
       heroProductCta:'MOVEL 제품 보기', heroTechCta:'기술 구조 보기',
       heroHardwareStatus:'하드웨어 시제품 보유', heroSoftwareStatus:'소프트웨어 데모',
       prototypeBadge:'개발 시제품', heroPhotoCaption:'착용형 구동 모듈과 제어 본체', heroPhotoNote:'실물 개발 시제품 촬영 이미지',
@@ -86,8 +86,8 @@
     },
     en: {
       navSoftware:'Software', navRoadmap:'Progress',
-      heroHeadline:'Control resistance.<br>Understand movement.',
-      heroDescription:'We are developing a system that connects wearable actuation with sensor data to record and analyze movement during exercise.',
+      heroHeadline:'Read human movement.<br>Expand what is possible.',
+      heroDescription:'We connect wearable actuation with movement data. MOVEL is being developed to record resistance and motion during exercise, helping make movement easier to understand.',
       heroProductCta:'Explore MOVEL', heroTechCta:'Explore the system',
       heroHardwareStatus:'Hardware prototype', heroSoftwareStatus:'Software demo',
       prototypeBadge:'Development prototype', heroPhotoCaption:'Wearable actuation modules and controller', heroPhotoNote:'Photograph of a working development prototype',

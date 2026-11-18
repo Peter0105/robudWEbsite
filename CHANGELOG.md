@@ -1,35 +1,16 @@
-# 변경 내역 — MOVEL 투자자용 홈페이지 개편
+# Changelog
 
-## 주요 변경
-- 첫 화면을 추상 애니메이션 중심에서 실제 MOVEL 개발 시제품 사진 중심으로 변경
-- 화살표 문자 장식을 제거하고 얇은 선형 표시로 통일
-- 센싱 → 실시간 제어 → 안전 → 통신 → 응용·분석 → 비즈니스 플랫폼의 6계층 구조 추가
-- WID Studio 시뮬레이션 데모를 `/studio/` 경로에 추가
-- 헬스장·PT센터를 초기 고객으로 우선 배치
-- 현재 확보한 개발 기반과 향후 검증 과제를 구분한 개발 현황 섹션 추가
-- `public/assests/` 오타를 `public/assets/`로 수정하여 로고·파비콘·소셜 이미지 경로 정상화
-- 한국어·영어 전환을 신규 섹션까지 확장
+## 2026-11-18 — Brand experience redesign
 
-## 공개 시 주의
-- WID Studio는 시뮬레이션 데이터 기반 데모입니다.
-- 공개 데모에서는 실제 장치 BLE 연결 및 모터 제어를 비활성화했습니다.
-- 실제 장치 연동, 안전 기능, 센터용 플랫폼은 완성·검증된 기능으로 표시하지 않았습니다.
+- Repositioned the homepage hero around ROBUD as the company and MOVEL as its first product.
+- Updated Korean and English hero messaging to communicate wearable robotics and movement-data analysis more directly.
+- Rebuilt the visual hierarchy with a cinematic dark hero, larger prototype photography, clearer product labels, stronger section structure, and refined responsive layouts.
+- Updated visual styling for technology architecture, MOVEL, WID Studio, applications, development status, vision, and contact sections.
+- Preserved the existing ROBUD logo, actual prototype photograph, WID Studio demo, inquiry workflow, language switch, SEO metadata, robots.txt, and sitemap.xml.
+- Kept disclosures that the WID Studio charts use simulated data and that product specifications, device integration, safety validation, and field deployment remain subject to development and verification.
+- Added `DESIGN_RESEARCH.md` documenting the reference study and ROBUD-specific design decisions.
 
-## 검증
-- `npm run check` 통과
-- 메인 페이지 및 WID Studio JavaScript 구문 검사 통과
-- 메인 페이지의 로컬 이미지·CSS·JS 참조 경로 확인
-- 실제 Cloudflare 배포 및 실기기 연결 테스트는 수행하지 않았습니다.
+## 2026-11-17 — SEO and Naver setup
 
-
-## SEO 및 검색 노출 기본 설정 (2026-11-18)
-- 검색 제목·설명·키워드를 로버드(ROBUD), 착용형 로봇, Movel 중심으로 갱신
-- Open Graph 사이트명·제목·설명·대표 URL 적용
-- canonical URL을 `https://robud.kr/`로 통일
-- `robots.txt`에서 전체 검색 수집 허용 및 사이트맵 지정
-- `sitemap.xml`을 표준 네임스페이스로 갱신
-- HTTP `X-Robots-Tag`와 HTML `noindex` 차단 설정 제거
-- 푸터의 도메인 연결 전 시안 배지 및 관련 비표시 코드 제거
-
-## 네이버 서치어드바이저 소유권 확인 (2026-11-18)
-- 발급받은 `naver-site-verification` 메타 태그를 `public/index.html`의 `<head>` 내부에 추가
+- Added Naver site verification and search metadata.
+- Added robots.txt and sitemap.xml.

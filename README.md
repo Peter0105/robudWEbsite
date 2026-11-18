@@ -84,3 +84,8 @@ npm run dev
 `robudofficial@robud.kr`
 
 문의 양식은 서버로 자동 전송하지 않고, 사용자의 메일 앱에서 초안을 여는 방식입니다.
+
+
+## Website design direction (2026-11-18)
+
+The homepage has been redesigned around ROBUD as the company, MOVEL as the first product, and WID Studio as the software demonstration. The design study and implementation rationale are documented in [DESIGN_RESEARCH.md](./DESIGN_RESEARCH.md). The redesign retains existing prototype and simulation disclaimers; do not replace them with unverified product claims.
